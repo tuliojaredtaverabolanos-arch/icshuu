@@ -1183,7 +1183,7 @@ const db = createClient(
     auth:{
       persistSession:true,
       autoRefreshToken:true,
-      detectSessionInUrl:true
+      detectSessionInUrl:false
     }
   }
 );
@@ -1221,7 +1221,7 @@ let realtimeTimer = null;
   El usuario jamás verá este email.
 */
 
-const AUTH_DOMAIN = 'videosoundicshu-login.example.com';
+const AUTH_DOMAIN = 'videosoundicshu.com';
 
 
 function authEmail(username){
@@ -3553,4 +3553,3 @@ init();
 
 </body>
 </html>
-
