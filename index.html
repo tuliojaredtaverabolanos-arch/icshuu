@@ -788,6 +788,117 @@ footer{
     transition:none !important;
   }
 }
+
+/* ===== TEMA NEÓN ===== */
+:root{
+  --cream:#080B17; --cream-2:#101629; --peach:#FF2D7D; --coral:#FF2D7D;
+  --coral-deep:#FF176D; --blush:#7A2CFF; --butter:#00D9FF;
+  --plum:#F7F8FF; --plum-soft:#AEB8D7; --white:#11182A;
+  --line:#273252; --shadow:0 18px 45px rgba(0,0,0,.28);
+}
+html{background:#080B17;}
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 15% 0%,rgba(122,44,255,.25),transparent 32rem),
+    radial-gradient(circle at 88% 8%,rgba(0,217,255,.16),transparent 28rem),
+    linear-gradient(180deg,#080B17 0%,#090D19 55%,#060914 100%);
+  color:#F7F8FF;
+}
+header{
+  padding:20px 6vw 42px;
+  background:
+    radial-gradient(circle at 45% -20%,rgba(255,45,125,.38),transparent 25rem),
+    linear-gradient(105deg,#15102D 0%,#32105E 40%,#082F70 100%);
+  border-bottom:1px solid rgba(255,255,255,.13);
+  box-shadow:0 16px 45px rgba(0,0,0,.25);
+}
+header::after{
+  content:""; position:absolute; inset:0; opacity:.13; pointer-events:none;
+  background-image:
+    linear-gradient(120deg,transparent 0 48%,rgba(255,255,255,.16) 49% 50%,transparent 51%),
+    linear-gradient(35deg,transparent 0 48%,rgba(255,255,255,.08) 49% 50%,transparent 51%);
+  background-size:70px 70px;
+}
+.topbar,.hero,.neon-nav{max-width:1180px;margin-left:auto;margin-right:auto;}
+.brand{cursor:pointer;display:flex;gap:12px;align-items:center;user-select:none;}
+.logo-mark{
+  width:52px;height:52px;flex:0 0 52px;display:grid;place-items:center;border-radius:16px;
+  position:relative;transform:rotate(-8deg);
+  background:linear-gradient(145deg,#FF2D7D 0%,#FF5B2D 45%,#7A2CFF 72%,#00D9FF 100%);
+  box-shadow:0 0 0 2px rgba(255,255,255,.18) inset,0 0 28px rgba(255,45,125,.36);
+}
+.logo-mark::before{content:"";position:absolute;inset:6px;border-radius:12px;border:2px solid rgba(255,255,255,.5);}
+.logo-play{width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:16px solid white;margin-left:4px;}
+.brand-copy{display:flex;flex-direction:column;line-height:1;}
+.brand-copy strong{font-family:'Baloo 2',sans-serif;font-size:1.42rem;letter-spacing:-.5px;color:white;}
+.brand-copy strong span{color:#FF2D7D}.brand-copy strong em{color:#00D9FF;font-style:normal;}
+.brand-copy small{color:#D6D9F2;font-family:'Nunito',sans-serif;font-size:.72rem;margin-top:2px;font-style:italic;}
+.session-box .pill{background:rgba(8,11,23,.65);color:#fff;border:1px solid rgba(255,255,255,.13);box-shadow:none;}
+.btn{transition:.18s ease}.btn:hover{transform:translateY(-2px)}
+.btn-primary{color:#fff;background:linear-gradient(90deg,#FF245F,#8A2CFF 55%,#008DFF);box-shadow:0 8px 24px rgba(255,45,125,.22);}
+.btn-primary:hover{background:linear-gradient(90deg,#FF176D,#7A2CFF 55%,#00A7FF);}
+.btn-ghost{color:#F7F8FF;background:#151C30;border:1px solid #273252}.btn-ghost:hover{background:#1C2540}
+.btn-outline{border:1px solid #596487;color:#F7F8FF}
+.neon-nav{display:flex;gap:8px;margin-top:18px;position:relative;z-index:2;}
+.neon-nav button{padding:9px 16px;border-radius:999px;color:#DCE3FF;background:rgba(8,11,23,.45);border:1px solid rgba(255,255,255,.11);font-weight:800;backdrop-filter:blur(12px);}
+.neon-nav button:hover{color:white;border-color:#FF2D7D;box-shadow:0 0 18px rgba(255,45,125,.16);}
+.hero{
+  margin-top:36px;padding:28px 30px;border:1px solid rgba(255,255,255,.14);border-radius:28px;
+  background:linear-gradient(110deg,rgba(7,11,27,.88),rgba(18,12,52,.56)),radial-gradient(circle at 78% 50%,rgba(0,217,255,.2),transparent 18rem);
+  box-shadow:0 20px 55px rgba(0,0,0,.22);backdrop-filter:blur(12px);
+}
+.hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.35rem)}.hero p{color:#C4CDE8}
+.hero-note{color:#fff;background:linear-gradient(90deg,rgba(255,45,125,.2),rgba(0,217,255,.12));border:1px solid rgba(255,255,255,.14);box-shadow:none;}
+.blob{filter:blur(8px)}.blob1{background:#7A2CFF}.blob2{background:#00D9FF}
+main{max-width:1180px;padding-top:10px}
+.section-head h2,.card h3.tag,.profile-header h2,.create-box h3{color:#F7F8FF}
+.section-head p,.owner-line,.profile-header p,.limit-note,.no-items,.existing-users{color:#AEB8D7}
+.sort-tabs button{color:#B9C2DE;background:#11182A;border-color:#273252}
+.sort-tabs button.active{color:white;background:linear-gradient(90deg,#FF2D7D,#7A2CFF);border-color:transparent}
+.feed{gap:22px}
+.card,.create-box,.manage-card,.profile-header{background:linear-gradient(180deg,rgba(20,27,47,.96),rgba(12,18,33,.96));border:1px solid #273252;box-shadow:0 20px 45px rgba(0,0,0,.22);}
+.card{position:relative;overflow:hidden}.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,#FF2D7D,#7A2CFF,#00D9FF)}
+.type-badge.music{background:rgba(255,45,125,.15);color:#FF6EA7;border:1px solid rgba(255,45,125,.3)}
+.type-badge.video{background:rgba(0,217,255,.12);color:#5BE8FF;border:1px solid rgba(0,217,255,.25)}
+.owner-line b,.comment-item b{color:#FF62A0}.rank-badge{background:linear-gradient(90deg,#7A2CFF,#006BFF)}
+.meta-row{color:#9EABCD}.meta-row .like-btn{color:#AEB8D7}.meta-row .like-btn.liked{color:#FF4B8E}.meta-row .like-btn:hover{background:#1A2239}
+.empty-state{color:#AEB8D7;background:#101629;border-color:#344263}.empty-state b{color:#F7F8FF}
+.overlay{background:rgba(2,5,14,.78);backdrop-filter:blur(10px)}
+.modal{color:#F7F8FF;background:#0F1628;border:1px solid #344263;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.modal-close,.tabs-auth button{background:#151E33;color:#C1C9E2;border-color:#2B3859}
+.tabs-auth button.active{background:linear-gradient(90deg,#FF2D7D,#7A2CFF);border-color:transparent;color:white}
+label{color:#B9C3E0}
+input,textarea,select{color:#F7F8FF;background:#0C1221;border-color:#2B3859}
+input::placeholder,textarea::placeholder{color:#677390}
+input:focus,textarea:focus,select:focus{border-color:#7A2CFF;box-shadow:0 0 0 3px rgba(122,44,255,.12)}
+.profile-header{position:relative;padding:28px;gap:22px;overflow:hidden}
+.profile-header::after{content:"";position:absolute;width:260px;height:260px;right:-70px;top:-100px;border-radius:50%;background:radial-gradient(circle,rgba(0,217,255,.17),transparent 68%);pointer-events:none}
+.profile-avatar-wrap{width:112px;height:112px;flex:0 0 112px;position:relative;z-index:1}
+.profile-avatar{width:112px;height:112px;border:4px solid #FF49A0;background:linear-gradient(145deg,#FF2D7D,#7A2CFF,#00D9FF);box-shadow:0 0 0 5px rgba(255,45,125,.09),0 0 36px rgba(255,45,125,.34);overflow:hidden}
+.profile-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar-camera{position:absolute;right:-2px;bottom:2px;width:38px;height:38px;border-radius:50%;color:#fff;background:linear-gradient(135deg,#FF2D7D,#7A2CFF);border:3px solid #11182A;display:grid;place-items:center;box-shadow:0 8px 18px rgba(0,0,0,.35);cursor:pointer}
+.profile-copy{position:relative;z-index:1;min-width:0}
+.profile-kicker{display:inline-block;margin-bottom:4px;color:#57E7FF;font-size:.72rem;font-weight:900;letter-spacing:.15em}
+.profile-copy h2{display:flex;align-items:center;gap:8px;font-size:1.8rem}
+.verified-dot{width:20px;height:20px;border-radius:50%;display:inline-grid;place-items:center;color:#06101A;background:#00D9FF;font-size:.72rem;font-family:'Nunito',sans-serif}
+.profile-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.profile-stats span{padding:8px 12px;border-radius:12px;color:#AFBAD8;background:#0B1222;border:1px solid #273252;font-size:.82rem}
+.profile-stats b{color:#FF63A3;font-size:1rem}.avatar-msg{min-height:18px;margin-top:8px;color:#62E7FF;font-size:.78rem;font-weight:800}
+.type-choice label{color:#C1CAE3;background:#10172A;border-color:#2B3859}
+.item-row,.comment-item{background:#0C1324;border:1px solid #222F4D}.item-row iframe{min-height:220px;background:#050812}
+.idx-tag{color:#07131A;background:#00D9FF}.expand-panel{border-color:#354261}
+footer{margin-top:50px;color:#BAC4DF;padding:34px 20px 26px;background:linear-gradient(90deg,#37073F,#28105A 45%,#073C74);border-top:1px solid rgba(255,255,255,.11)}
+@media(max-width:700px){
+  .brand-copy small{display:none}.logo-mark{width:44px;height:44px;flex-basis:44px}
+  .neon-nav{overflow-x:auto;padding-bottom:4px}.neon-nav button{white-space:nowrap}
+  .hero{padding:24px 20px}.profile-header{align-items:center;text-align:left}
+}
+@media(max-width:480px){
+  .brand-copy strong{font-size:1.08rem}.profile-header{text-align:center}
+  .profile-copy h2{justify-content:center}.profile-stats{justify-content:center}
+}
+
 </style>
 </head>
 
@@ -819,14 +930,23 @@ footer{
 
   <div class="topbar">
 
-    <div class="brand">
-      <span class="dot"></span>
-      VideoSoundICSHu
+    <div class="brand" onclick="goTo('home')" role="button" tabindex="0" aria-label="Ir al inicio">
+      <span class="logo-mark" aria-hidden="true"><span class="logo-play"></span></span>
+      <span class="brand-copy">
+        <strong>Video<span>Sound</span><em>ICSHu</em></strong>
+        <small>Tus playlists, tu mundo.</small>
+      </span>
     </div>
 
     <div class="session-box" id="sessionBox"></div>
 
   </div>
+
+  <nav class="neon-nav" aria-label="Navegación principal">
+    <button onclick="goTo('home')">⌂ Inicio</button>
+    <button onclick="goTo('home'); setSort('likes')">🔥 Tendencias</button>
+    <button onclick="goTo('profile')">♫ Mis playlists</button>
+  </nav>
 
   <div class="hero">
 
@@ -1347,7 +1467,7 @@ async function loadState(){
 
     db
       .from('profiles')
-      .select('id, username, bio, created_at'),
+      .select('id, username, bio, avatar_url, created_at'),
 
     db
       .from('playlists')
@@ -1411,6 +1531,8 @@ async function loadState(){
         username:u.username,
 
         bio:u.bio || '',
+
+        avatarUrl:u.avatar_url || '',
 
         createdAt:u.created_at
 
@@ -2837,6 +2959,99 @@ async function addComment(id){
 }
 
 
+
+/* ============================================================
+   FOTO DE PERFIL
+============================================================ */
+
+async function uploadProfilePhoto(event){
+
+  const file = event.target.files?.[0];
+
+  if(!file || !currentUser){
+    return;
+  }
+
+  const msg = document.getElementById('avatarMsg');
+  const say = (t) => {
+    if(msg) msg.textContent = t || '';
+  };
+
+  if(!file.type.startsWith('image/')){
+    say('Selecciona una imagen válida.');
+    event.target.value = '';
+    return;
+  }
+
+  if(file.size > 5 * 1024 * 1024){
+    say('La imagen debe pesar menos de 5 MB.');
+    event.target.value = '';
+    return;
+  }
+
+  say('Subiendo foto...');
+
+  try{
+
+    const ext = (file.name.split('.').pop() || 'jpg')
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g,'');
+
+    const path = `${currentUser}/avatar-${Date.now()}.${ext || 'jpg'}`;
+
+    const { error:uploadError } = await db
+      .storage
+      .from('avatars')
+      .upload(path,file,{
+        cacheControl:'3600',
+        upsert:true,
+        contentType:file.type
+      });
+
+    if(uploadError){
+      throw uploadError;
+    }
+
+    const { data:publicData } = db
+      .storage
+      .from('avatars')
+      .getPublicUrl(path);
+
+    const avatarUrl = publicData?.publicUrl;
+
+    if(!avatarUrl){
+      throw new Error('No se pudo obtener la URL de la foto.');
+    }
+
+    const { error:updateError } = await db
+      .from('profiles')
+      .update({ avatar_url:avatarUrl })
+      .eq('id',currentUser);
+
+    if(updateError){
+      throw updateError;
+    }
+
+    await refreshAndRender();
+
+    const freshMsg = document.getElementById('avatarMsg');
+    if(freshMsg){
+      freshMsg.textContent = '✓ Foto actualizada';
+    }
+
+  }catch(error){
+
+    console.error('Error subiendo avatar:',error);
+    say(error.message || 'No se pudo subir la foto.');
+
+  }finally{
+
+    event.target.value = '';
+
+  }
+
+}
+
 /* ============================================================
    PERFIL
 ============================================================ */
@@ -2863,27 +3078,49 @@ function renderProfile(){
     )
     .innerHTML = `
 
-      <div class="avatar">
+      <div class="profile-avatar-wrap">
+        <div class="avatar profile-avatar">
+          ${
+            user.avatarUrl
+              ? `<img src="${escapeHtml(user.avatarUrl)}" alt="Foto de perfil de ${escapeHtml(user.username)}">`
+              : escapeHtml(user.username.charAt(0).toUpperCase())
+          }
+        </div>
 
-        ${escapeHtml(
-          user.username
-            .charAt(0)
-            .toUpperCase()
-        )}
+        <button
+          class="avatar-camera"
+          type="button"
+          title="Cambiar foto de perfil"
+          onclick="document.getElementById('avatarInput').click()"
+        >
+          📷
+        </button>
 
+        <input
+          id="avatarInput"
+          type="file"
+          accept="image/png,image/jpeg,image/webp,image/gif"
+          hidden
+          onchange="uploadProfilePhoto(event)"
+        >
       </div>
 
-
-      <div>
+      <div class="profile-copy">
+        <span class="profile-kicker">✦ PERFIL</span>
 
         <h2>
           ${escapeHtml(user.username)}
+          <span class="verified-dot">✓</span>
         </h2>
 
-        <p>
-          ${escapeHtml(user.bio)}
-        </p>
+        <p>${escapeHtml(user.bio)}</p>
 
+        <div class="profile-stats">
+          <span><b>${playlists.filter(p => p.ownerId === currentUser).length}</b> playlists</span>
+          <span><b>${playlists.filter(p => p.ownerId === currentUser).reduce((n,p)=>n+p.likedBy.length,0)}</b> likes recibidos</span>
+        </div>
+
+        <div id="avatarMsg" class="avatar-msg"></div>
       </div>
 
     `;
